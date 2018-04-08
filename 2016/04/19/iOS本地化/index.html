@@ -79,13 +79,40 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="QYLocalization最近接触到iOS应用本地化的相关使用，于是花了点时间研究了一下，下面把成果分享给大家。 ###一、简介  使用本地化功能，可以轻松地将应用程序翻译成多种语言，甚至可以翻译成同一语言的多种方言 如果要添加本地化功能，需要为每种支持的语言创建一个子目录，称为”本地化文件夹”，通常使用.lproj作为拓展名 当本地化的应用程序需要载入某一资源时，如图像、属性列表、nib文件，">
+<meta property="og:type" content="article">
 <meta property="og:title" content="千叶笔记">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/04/19/iOS本地化/index.html">
 <meta property="og:site_name" content="千叶笔记">
+<meta property="og:description" content="QYLocalization最近接触到iOS应用本地化的相关使用，于是花了点时间研究了一下，下面把成果分享给大家。 ###一、简介  使用本地化功能，可以轻松地将应用程序翻译成多种语言，甚至可以翻译成同一语言的多种方言 如果要添加本地化功能，需要为每种支持的语言创建一个子目录，称为”本地化文件夹”，通常使用.lproj作为拓展名 当本地化的应用程序需要载入某一资源时，如图像、属性列表、nib文件，">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418201256929-174214643.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202058820-1508814125.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202134054-914477904.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202149554-232771392.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202225804-1224327948.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418201538476-1545911645.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160419112705866-1631692328.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202335132-261429544.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202823288-1344437197.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418203407101-752360795.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418203259366-1538073848.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418203904398-1855906145.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418211850835-2136615719.png">
+<meta property="og:image" content="http://img.my.csdn.net/uploads/201302/02/1359770541_8270.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418212858913-1447783158.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418213135726-220025052.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221518179-1497265294.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221812491-828679484.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221819913-1076150726.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221633663-1786821289.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221702366-1999391314.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221709866-1016484201.png">
+<meta property="og:updated_time" content="2016-05-05T08:51:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="千叶笔记">
+<meta name="twitter:description" content="QYLocalization最近接触到iOS应用本地化的相关使用，于是花了点时间研究了一下，下面把成果分享给大家。 ###一、简介  使用本地化功能，可以轻松地将应用程序翻译成多种语言，甚至可以翻译成同一语言的多种方言 如果要添加本地化功能，需要为每种支持的语言创建一个子目录，称为”本地化文件夹”，通常使用.lproj作为拓展名 当本地化的应用程序需要载入某一资源时，如图像、属性列表、nib文件，">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418201256929-174214643.png">
 
 
 
@@ -115,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/04/19/iOS本地化/"/>
 
 
 
 
 
-  <title>千叶笔记</title>
+  <title> | 千叶笔记</title>
   
 
 
@@ -140,8 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,137 +240,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/08/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="易雄">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千叶笔记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/08/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-08T15:35:36+08:00">
-                2018-04-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -374,9 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/04/19/iOS本地化/" itemprop="url">Untitled</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -426,9 +322,7 @@
       
 
       
-        
-          
-            <h2 id="QYLocalization"><a href="#QYLocalization" class="headerlink" title="QYLocalization"></a>QYLocalization</h2><p>最近接触到iOS应用本地化的相关使用，于是花了点时间研究了一下，下面把成果分享给大家。</p>
+        <h2 id="QYLocalization"><a href="#QYLocalization" class="headerlink" title="QYLocalization"></a>QYLocalization</h2><p>最近接触到iOS应用本地化的相关使用，于是花了点时间研究了一下，下面把成果分享给大家。</p>
 <p>###一、简介</p>
 <ul>
 <li>使用本地化功能，可以轻松地将应用程序翻译成多种语言，甚至可以翻译成同一语言的多种方言</li>
@@ -506,8 +400,6 @@
 <p>2.中文环境下   </p>
 <p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221633663-1786821289.png" alt=""><br><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221702366-1999391314.png" alt=""><br><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221709866-1016484201.png" alt=""><br>最后给大家推荐一篇不错的本地化<a href="https://www.raywenderlich.com/64401/internationalization-tutorial-for-ios-2014" target="_blank" rel="noopener">博客</a>，提供给大家参考。</p>
 
-          
-        
       
     </div>
     
@@ -524,12 +416,28 @@
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/08/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -539,10 +447,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -550,6 +459,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -570,8 +483,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -613,6 +535,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#QYLocalization"><span class="nav-number">1.</span> <span class="nav-text">QYLocalization</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -753,6 +691,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
