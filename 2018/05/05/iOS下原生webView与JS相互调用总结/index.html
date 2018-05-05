@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="iOS开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="千叶笔记">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="最近项目转型，很多需求转为使用H5开发完成后再由app调用，这样一来app需要做的最多的事情就是解决js与原生oc相互调用的问题，例如照片、通讯录选择等，下面就将最近一段时间的研究成果记录下来。 UIWebView篇1、UIWebView自带方法：js-&amp;gt;oc，通过拦截网络请求判断约定好的协议实现交互；oc-&amp;gt;js，通过UIWebView方法stringByEvaluatingJava">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS下原生webView与js相互调用总结">
+<meta property="og:url" content="http://yoursite.com/2018/05/05/iOS下原生webView与JS相互调用总结/index.html">
 <meta property="og:site_name" content="千叶笔记">
-<meta property="og:description" content="iOS开发">
+<meta property="og:description" content="最近项目转型，很多需求转为使用H5开发完成后再由app调用，这样一来app需要做的最多的事情就是解决js与原生oc相互调用的问题，例如照片、通讯录选择等，下面就将最近一段时间的研究成果记录下来。 UIWebView篇1、UIWebView自带方法：js-&amp;gt;oc，通过拦截网络请求判断约定好的协议实现交互；oc-&amp;gt;js，通过UIWebView方法stringByEvaluatingJava">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-05T01:29:55.686Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="千叶笔记">
-<meta name="twitter:description" content="iOS开发">
+<meta name="twitter:title" content="iOS下原生webView与js相互调用总结">
+<meta name="twitter:description" content="最近项目转型，很多需求转为使用H5开发完成后再由app调用，这样一来app需要做的最多的事情就是解决js与原生oc相互调用的问题，例如照片、通讯录选择等，下面就将最近一段时间的研究成果记录下来。 UIWebView篇1、UIWebView自带方法：js-&amp;gt;oc，通过拦截网络请求判断约定好的协议实现交互；oc-&amp;gt;js，通过UIWebView方法stringByEvaluatingJava">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/05/iOS下原生webView与JS相互调用总结/"/>
 
 
 
 
 
-  <title>千叶笔记</title>
+  <title>iOS下原生webView与js相互调用总结 | 千叶笔记</title>
   
 
 
@@ -145,8 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <a href="https://github.com/peanutNote"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
@@ -241,128 +242,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/05/FlexLib初体验/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="易雄">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/qianyeIcon.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千叶笔记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/05/FlexLib初体验/" itemprop="url">FlexLib初体验</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-05T09:28:03+08:00">
-                2018-05-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -392,9 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/05/iOS下原生webView与JS相互调用总结/" itemprop="url">iOS下原生webView与js相互调用总结</a></h1>
+          <h1 class="post-title" itemprop="name headline">iOS下原生webView与js相互调用总结</h1>
         
 
         <div class="post-meta">
@@ -444,9 +324,7 @@
       
 
       
-        
-          
-            <p>最近项目转型，很多需求转为使用H5开发完成后再由app调用，这样一来app需要做的最多的事情就是解决js与原生oc相互调用的问题，例如照片、通讯录选择等，下面就将最近一段时间的研究成果记录下来。</p>
+        <p>最近项目转型，很多需求转为使用H5开发完成后再由app调用，这样一来app需要做的最多的事情就是解决js与原生oc相互调用的问题，例如照片、通讯录选择等，下面就将最近一段时间的研究成果记录下来。</p>
 <h3 id="UIWebView篇"><a href="#UIWebView篇" class="headerlink" title="UIWebView篇"></a>UIWebView篇</h3><p>1、UIWebView自带方法：js-&gt;oc，通过拦截网络请求判断约定好的协议实现交互；oc-&gt;js，通过UIWebView方法<code>stringByEvaluatingJavaScriptFromString:</code>实现。  </p>
 <p>我们先准备一个简单的html文件用作测试使用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;UIWebView方式1&lt;/title&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var AppJSBridge = new Object();</span><br><span class="line">    function helloworld()</span><br><span class="line">    &#123;</span><br><span class="line">        alert(&quot;这里是网页弹窗&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;a href=&quot;success://xxx/xxx?xxx&amp;xxx&quot;&gt;hello world&lt;/a&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
@@ -476,8 +354,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[self.webView addObserver:self forKeyPath:@&quot;title&quot; options:NSKeyValueObservingOptionNew context:NULL];</span><br><span class="line"></span><br><span class="line">- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context &#123;</span><br><span class="line">    if ([keyPath isEqualToString:@&quot;title&quot;]) &#123;</span><br><span class="line">        if (object == self.webView) &#123;</span><br><span class="line">            if(self.navigationController)</span><br><span class="line">                self.navigationItem.title = self.webView.title;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>WKWebView代码方法比较多，下面也就简单介绍一下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark - WKNavigationDelegate</span><br><span class="line"></span><br><span class="line">// 页面开始加载时调用</span><br><span class="line">- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation &#123;   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 当内容开始返回时调用</span><br><span class="line">- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation &#123;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 页面加载完成之后调用</span><br><span class="line">- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 页面加载失败时调用</span><br><span class="line">- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error &#123;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 接收到服务器跳转请求之后调用</span><br><span class="line">- (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation &#123;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 在收到响应后，决定是否跳转</span><br><span class="line">- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler &#123;   </span><br><span class="line">    NSLog(@&quot;%@&quot;,navigationResponse.response.URL.absoluteString);</span><br><span class="line">    //允许跳转</span><br><span class="line">    decisionHandler(WKNavigationResponsePolicyAllow);</span><br><span class="line">    //不允许跳转</span><br><span class="line">    //decisionHandler(WKNavigationResponsePolicyCancel);</span><br><span class="line">&#125;</span><br><span class="line">// 在发送请求之前，决定是否跳转</span><br><span class="line">- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler &#123;</span><br><span class="line">    NSLog(@&quot;%@&quot;,navigationAction.request.URL.absoluteString);</span><br><span class="line">    //允许跳转</span><br><span class="line">    decisionHandler(WKNavigationActionPolicyAllow);</span><br><span class="line">    //不允许跳转</span><br><span class="line">    //decisionHandler(WKNavigationActionPolicyCancel);</span><br><span class="line">&#125;</span><br><span class="line">#pragma mark - WKUIDelegate</span><br><span class="line">// 创建一个新的WebView</span><br><span class="line">- (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures &#123;</span><br><span class="line">    return nil;</span><br><span class="line">&#125;</span><br><span class="line">// 输入框</span><br><span class="line">- (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(nullable NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * __nullable result))completionHandler &#123;</span><br><span class="line">    completionHandler(@&quot;http&quot;);</span><br><span class="line">&#125;</span><br><span class="line">// 确认框</span><br><span class="line">- (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL result))completionHandler &#123;</span><br><span class="line">    completionHandler(YES);</span><br><span class="line">&#125;</span><br><span class="line">// 警告框</span><br><span class="line">- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler &#123;</span><br><span class="line">    MyLog(@&quot;%@&quot;,message);</span><br><span class="line">    completionHandler();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
     
@@ -487,344 +363,74 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/WechatIMG44.jpeg" alt="易雄 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/WechatIMG45.jpeg" alt="易雄 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/19/iOS本地化/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="易雄">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/qianyeIcon.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千叶笔记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/04/19/iOS本地化/" itemprop="url">iOS本地化</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-19T14:37:40+08:00">
-                2016-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="QYLocalization"><a href="#QYLocalization" class="headerlink" title="QYLocalization"></a>QYLocalization</h2><p>最近接触到iOS应用本地化的相关使用，于是花了点时间研究了一下，下面把成果分享给大家。</p>
-<h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><ul>
-<li>使用本地化功能，可以轻松地将应用程序翻译成多种语言，甚至可以翻译成同一语言的多种方言</li>
-<li>如果要添加本地化功能，需要为每种支持的语言创建一个子目录，称为”本地化文件夹”，通常使用.lproj作为拓展名</li>
-<li>当本地化的应用程序需要载入某一资源时，如图像、属性列表、nib文件，应用程序会检查用户的语言和地区，并查找相匹配的本地化文件夹。如果找到了相应的文件夹，就会载入这个文件夹中的资源</li>
-<li>当前项目环境为Xcode7.3、iOS9.3，涉及的代码可以去我们github上下载：<span style="color: #0000ff;"><a href="https://github.com/peanutNote/QYLocalization.git" target="_blank" rel="noopener">https://github.com/peanutNote/QYLocalization.git</a> </span></li>
-<li>为了节约时间本文大致基于<a href="http://blog.csdn.net/q199109106q/article/details/8564615" target="_blank" rel="noopener">李明杰老师的博客</a>进行写作</li>
-</ul>
-<h3 id="二、创建项目"><a href="#二、创建项目" class="headerlink" title="二、创建项目"></a>二、创建项目</h3><p>工程目录结构</p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418201256929-174214643.png" alt="image"></p>
-<p>运行效果图(因为没有使用本地化功能，所以不管用户选择什么语言环境，运行的效果都是一样的)</p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202058820-1508814125.png" alt="image"><br><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202134054-914477904.png" alt="image"><br><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202149554-232771392.png" alt="image"></p>
-<p>现在想在中文语言环境下，换另一套实现，其中包括：</p>
-<ul>
-<li>更改storyboard文件中的文字（nib本地化,storyboard也是nib的一种</li>
-<li>更改登录按钮下面的图片（图片本地化）   </li>
-<li>更改对话框中的文字(Tip和Ok)（字符串本地化）   </li>
-<li>更改应用名称（应用名称本地化，即本地化Info.plist文件） </li>
-</ul>
-<h3 id="三、本地化前的准备"><a href="#三、本地化前的准备" class="headerlink" title="三、本地化前的准备"></a>三、本地化前的准备</h3><p>其实就是先创建好中文的本地化文件夹（zh-Hans.lproj），让应用程序支持中文语言环境</p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202225804-1224327948.png" alt="image"> </p>
-<p>其中Base.lproj就是指的勾选的本地化，也就是说我们项目创建默认使用的是Base的本地化。这也是为什么每次创建项目Main.storyboard会在一个Base.lproj的文件夹中的原因。同时鼠标指的是系统默认创建的一个英文本地化配置(里面有两个文件正好跟Base.lproj中的对应，目前可以理解Base也是英文的一种本地化)。这里为了不影响说明我们去掉这个勾选，只用中文和英文本地化来进行说明。当我去掉勾时会删除Main.storyboard和LaunchScreen.stroyboard，因此我们需要先在英文换件中添加这两个文件然后再去掉Base，具体办法就是选中Main.storyboard,勾选下图的English这两个文件就会拷贝一份到en.lproj中。</p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418201538476-1545911645.png" alt="image"></p>
-<p>我们来看此时的项目文件结构</p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160419112705866-1631692328.png" alt=""></p>
-<p>进入正题：因为英文Localization系统已经帮我们创建好了，我们在这里只需要创建中文Localization即可</p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202335132-261429544.png" alt=""></p>
-<p>选择Finish后我们的项目文件结果为：</p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418202823288-1344437197.png" alt=""></p>
-<p>zh-Hans.lproj文件夹已经为我们创建好了，与en.lproj文件夹一样包含一个Main.storyboard表示在中文环境会启用这里面的资源。这里有的同学可能在zh-Hans中生成的不是Main.storyboard而是Main.strings,这是因为你没有去掉Base这个本地化(也就是上文中的勾)，不过这时候也可以自己选择</p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418203407101-752360795.png" alt=""></p>
-<p>至于这里的Main.strings文件也是关于storyboard本地化的一种方法。需要我们先在nib中添加好控件弄好布局以后在执行本地化，然后Main.strings中就会生成类似字符串本地化(后面会介绍，因为这种方法只能修改控件的title，所以我这里没有使用这个来说明)一样的文件,修改对应的地方就可以修改storyboard中的控件title了</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Class = "UILabel"; text = "Password"; ObjectID = "6Jw-lK-yZp"; */</span></span><br><span class="line"><span class="string">"6Jw-lK-yZp.text"</span> = <span class="string">"Password"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "M8g-w0-oLf"; */</span></span><br><span class="line"><span class="string">"M8g-w0-oLf.normalTitle"</span> = <span class="string">"Login"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Class = "UILabel"; text = "UserName"; ObjectID = "io8-3O-gpY"; */</span></span><br><span class="line"><span class="string">"io8-3O-gpY.text"</span> = <span class="string">"UserName"</span>;</span><br></pre></td></tr></table></figure>
-<p>同时Xcode中的Main.storyboard左边会出现一个三角，展开可以发现分别都有2个版本的文件。到此我们的项目就支持英文和中文环境了，本地化准备完毕</p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418203259366-1538073848.png" alt=""></p>
-<h3 id="四、nib文件的本地化"><a href="#四、nib文件的本地化" class="headerlink" title="四、nib文件的本地化"></a>四、nib文件的本地化</h3><p>打开Main.storyboard(Simplified)文件，修改里面的文字信息(这里不修改图片)<br><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418203904398-1855906145.png" alt=""> </p>
-<h3 id="五、应用程序名称本地化-Info-plist本地化"><a href="#五、应用程序名称本地化-Info-plist本地化" class="headerlink" title="五、应用程序名称本地化(Info.plist本地化)"></a>五、应用程序名称本地化(Info.plist本地化)</h3><p>知识背景：Info.plist中有个叫CFBundleDisplayName的key决定了应用程序的名称  </p>
-<p>1.为Info.plist添加一个key-value，让应用程序支持名称本地化，Info.plist就会去InfoPlist.strings加载CFBundleDisplayName对应的字符串,（这里需要注意不能直接本地化Info.plist，因为这样做之后Info.plist文件会存在各自的本地化文件夹中(像en.lproj)中，这样系统会报Info.plist文件不存在的问题，虽然可以去指定Info.plist文件的位置，但是这样就不能实现本地化的目的了，所以需要用到InfoPlist.strings文件）。<br><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418211850835-2136615719.png" alt=""> </p>
-<p>用这种方法分别为英文和中文本地化添加InfoPlist.strings文件并且在Info.plst中添加Application has localized display name字段，赋值为YES </p>
-<p><img src="http://img.my.csdn.net/uploads/201302/02/1359770541_8270.png" alt=""> </p>
-<p>在对应的InfoPlist.strings文件中添加各自的应用名 InfoPlist.strings(English):</p>
-<p><code>CFBundleDisplayName=&quot;Localization&quot;;</code></p>
-<p>在InfoPlist.strings(Simplifid):</p>
-<p><code>CFBundleDisplayName=&quot;本地化&quot;;</code></p>
-<h3 id="六、图片本地化"><a href="#六、图片本地化" class="headerlink" title="六、图片本地化"></a>六、图片本地化</h3><p>1.直接拖拽到项目的图片本地化(这里演示本地化home.png，nib文件中登录按钮下面的房子图片) 用上面添加InfoPlist.strings的方法添加该图片的本地化，分别为英文和中文环境添加home.png文件 </p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418212858913-1447783158.png" alt=""></p>
-<p>查看下项目文件中home.png的情况 </p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418213135726-220025052.png" alt=""> </p>
-<p>在代码中使用<code>[UIImage imageNamed:@&quot;home.png&quot;];</code>  即可   </p>
-<p><span style="color: #ff0000; background-color: #ffffff;">注意：本地化完图片文件，记得Clean一下项目，而且最好先删除应用程序，再重新安装</span> </p>
-<p>2.使用Assets.xcassets或者Images.xcassets管理图片本地化  因为iOS暂不支持.xcassets的本地化，所以这里需要结合字符串的本地化来处理(这里也放在后面介绍) </p>
-<h3 id="七、字符串的本地化"><a href="#七、字符串的本地化" class="headerlink" title="七、字符串的本地化"></a>七、字符串的本地化</h3><p>1.创建一个字符串资源文件 文件名最好是Localizable.strings，如果使用其他文件名，使用字符串时的调用会有些区别<br>2.依旧按照上面的方法为Localizable.strings添加多语言支持<br>3.在Localizable.strings(English)文件加入：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Tip=<span class="string">"Tip"</span>;</span><br><span class="line"> </span><br><span class="line">Ok=<span class="string">"Ok"</span>;</span><br><span class="line"> </span><br><span class="line"><span class="string">"Please input your userName"</span>=<span class="string">"Please input your userName"</span>;</span><br></pre></td></tr></table></figure>
-<p>4.在Localizable.strings(Chinese)文件加入：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Tip=<span class="string">"提示"</span>;</span><br><span class="line"> </span><br><span class="line">Ok=<span class="string">"好的"</span>;</span><br><span class="line"> </span><br><span class="line"><span class="string">"Please input your userName"</span>=<span class="string">"请输入用户名"</span>;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="number">5.</span>在代码中使用<span class="built_in">NSLocalizedString</span>(key, comment)来读取本地化字符串，key是Localizable.strings文件中等号左边的字符串，comment纯粹是注释。同时上文中提到的.xcassets本地化也需要用到这个。首先添加各自的图片并命名如：image1，image2，本地化一个字符串imageName用作图片的名字，然后在各自的Localizable.strings中对应到各自的实际图片名称即可。  </span><br><span class="line"> </span><br><span class="line"><span class="number">6.</span>在Localizable.strings(English)文件加入：</span><br><span class="line"></span><br><span class="line">```objc</span><br><span class="line"><span class="string">"imageName"</span> = <span class="string">"image1"</span>;</span><br></pre></td></tr></table></figure>
-<p>7.在Localizable.strings(Chinese)文件加入：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"imageName"</span> = <span class="string">"image2"</span>;</span><br></pre></td></tr></table></figure>
-<p><span style="color: #ff0000; background-color: #ffffff;">如果没有对字符串进行本地化 或者 找不到key对应的值，NSLocalizedString将直接返回key这个字符串</span>  </p>
-<p>注意：如果你的字符串资源文件名不是Localizable.strings，如qy.strings，那么你就得使用NSLocalizedStringFromTable()来读取本地化字符串：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSLocalizedStringFromTable</span>(<span class="string">@"Tip"</span>, <span class="string">@"qy"</span>, <span class="literal">nil</span>);</span><br></pre></td></tr></table></figure>
-<p>补充：生成字符串资源文件的另一种方式(通过终端命令genstrings，可以自行补充)</p>
-<p>1.首先添加获取字符串的代码，比如在ViewController.m。(其实这里就是方便我们不用针对每一个需要本地化字符串的地方都去上面Localizable.strings文件中一一添加，我们只需要使用NSLocalizedString取字符串然后用genstrings命令就可以帮我们完善Localizable.strings文件啦)</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *tip = <span class="built_in">NSLocalizedString</span>(<span class="string">@"Tip"</span>, <span class="string">@"dialog title"</span>); </span><br><span class="line"><span class="built_in">NSString</span> *ok = <span class="built_in">NSLocalizedString</span>(<span class="string">@"Ok"</span>, <span class="string">@"dialog button"</span>);</span><br></pre></td></tr></table></figure>
-<p>2.打开终端，cd到项目文件夹下(包含en.lproj和zh-Hans.lproj，否则会报错couldn’t connect to output directory xx.lproj)</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ./ -name <span class="string">"*.m"</span> -print0 | xargs <span class="number">-0</span> genstrings -o en.lproj <span class="comment">// 注意*.m旁边的引号，这个不可缺少，网上有很多这种命令是没有加引号的，这样执行会报错xx.m: unknown primary or operator</span></span><br></pre></td></tr></table></figure>
-<p>如果使用NSLocalizedStringFromTable(key, tbl, comment)来获取字符串，资源文件会以tbl参数作为文件名，比如</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *tip = <span class="built_in">NSLocalizedStringFromTable</span>(<span class="string">@"Tip"</span>, <span class="string">@"qy"</span>, <span class="string">@"dialog title"</span>);  </span><br><span class="line"><span class="built_in">NSString</span> *ok = <span class="built_in">NSLocalizedStringFromTable</span>(<span class="string">@"Ok"</span>, <span class="string">@"qy"</span>, <span class="string">@"dialog button"</span>);</span><br></pre></td></tr></table></figure>
-<p>生成的资源文件为：qy.strings</p>
-<p>4.将资源文件导入项目即可，然后打开资源文件，可以发现已经生成了key和comment </p>
-<h3 id="八、其他文件的本地化"><a href="#八、其他文件的本地化" class="headerlink" title="八、其他文件的本地化"></a>八、其他文件的本地化</h3><p>跟六中图片本地化的原理是一样的，重复六中的每个步骤即可 </p>
-<h3 id="九、最终效果演示"><a href="#九、最终效果演示" class="headerlink" title="九、最终效果演示"></a>九、最终效果演示</h3><p>1.英文环境下  </p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221518179-1497265294.png" alt=""><br><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221812491-828679484.png" alt=""><br><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221819913-1076150726.png" alt=""></p>
-<p>2.中文环境下   </p>
-<p><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221633663-1786821289.png" alt=""><br><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221702366-1999391314.png" alt=""><br><img src="http://images2015.cnblogs.com/blog/685098/201604/685098-20160418221709866-1016484201.png" alt=""><br>最后给大家推荐一篇不错的本地化<a href="https://www.raywenderlich.com/64401/internationalization-tutorial-for-ios-2014" target="_blank" rel="noopener">博客</a>，提供给大家参考。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/03/导航栏动画/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="易雄">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/qianyeIcon.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千叶笔记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/11/03/导航栏动画/" itemprop="url">导航栏动画</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-11-03T16:13:45+08:00">
-                2015-11-03
-              </time>
+              <a href="/2016/04/19/iOS本地化/" rel="next" title="iOS本地化">
+                <i class="fa fa-chevron-left"></i> iOS本地化
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2018/05/05/FlexLib初体验/" rel="prev" title="FlexLib初体验">
+                FlexLib初体验 <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="QYNavigationAnimation"><a href="#QYNavigationAnimation" class="headerlink" title="QYNavigationAnimation"></a>QYNavigationAnimation</h2><ul>
-<li>The navigation bar to push the animation</li>
-<li>导航栏推送动画</li>
-</ul>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ul>
-<li>将QYNavigationAnimation文件导入项目中，使用QYNavigationAnimation创建导航栏控制器</li>
-<li>为QYNavigationAnimation的导航栏对象设置QYNavigationAnimationModel属性，该属性为一个枚举类型:</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSInteger</span>, QYNavigationAnimationModel) &#123;</span><br><span class="line">    <span class="comment">// 往上push</span></span><br><span class="line">    QYNavigationUpPush,</span><br><span class="line">    <span class="comment">// 往左push</span></span><br><span class="line">    QYNavigationLeftPush,</span><br><span class="line">    <span class="comment">// 往右push</span></span><br><span class="line">    QYNavigationRightPush,</span><br><span class="line">    <span class="comment">// 往下push</span></span><br><span class="line">    QYNavigationDownPush,</span><br><span class="line">    <span class="comment">// 往左上push</span></span><br><span class="line">    QYNavigationLeftUpPush,</span><br><span class="line">    <span class="comment">// 往左下push</span></span><br><span class="line">    QYNavigationLeftDownPush,</span><br><span class="line">    <span class="comment">// 往右上push</span></span><br><span class="line">    QYNavigationRightUpPush,</span><br><span class="line">    <span class="comment">// 往右下push</span></span><br><span class="line">    QYNavigationRightDownPush</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>效果如下：</li>
-</ul>
-<p><img src="https://github.com/peanutNote/QYNavigationAnimation/blob/master/QYNavigationAnimation/demo.gif" alt="image"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -834,10 +440,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -845,6 +452,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -865,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -944,6 +564,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIWebView篇"><span class="nav-number">1.</span> <span class="nav-text">UIWebView篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WKWebView篇"><span class="nav-number">2.</span> <span class="nav-text">WKWebView篇</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1065,6 +701,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
